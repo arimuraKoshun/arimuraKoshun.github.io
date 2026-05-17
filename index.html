@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koshun Arimura — Personal Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400&family=Noto+Sans+JP:wght@300;400&family=EB+Garamond:ital,wght@0,400;1,400&family=DM+Sans:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1a1a1a;
+            --muted: #888;
+            --border: #e8e8e8;
+            --accent: #1a1a1a;
+            --sans: 'DM Sans', 'Noto Sans JP', sans-serif;
+            --serif: 'EB Garamond', 'Noto Serif JP', serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--fg);
+            font-family: var(--sans);
+            font-size: 15px;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.4rem 3rem;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-logo {
+            font-family: var(--serif);
+            font-size: 1rem;
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.78rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--fg);
+        }
+
+        /* ── HERO / TOP ── */
+        #top {
+            padding: 7rem 3rem 5rem;
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 220px;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .hero-name {
+            font-family: var(--serif);
+            font-size: clamp(2.4rem, 4vw, 3.8rem);
+            font-weight: 400;
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero-name-ja {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--muted);
+            margin-bottom: 2rem;
+        }
+
+        .hero-bio {
+            font-size: 0.92rem;
+            color: #444;
+            line-height: 1.9;
+            margin-bottom: 1.6rem;
+        }
+
+        .hero-bio p {
+            margin-bottom: 0.6rem;
+        }
+
+        .hero-links {
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            margin-top: 1.8rem;
+        }
+
+        .hero-links a {
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 2px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .hero-links a:hover {
+            color: var(--fg);
+            border-color: var(--fg);
+        }
+
+        .hero-photo {
+            width: 100%;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            background: var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            font-size: 0.75rem;
+            overflow: hidden;
+        }
+
+        .hero-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background: #f2f2f2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            font-size: 0.72rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* ── DIVIDER ── */
+        .divider {
+            max-width: 900px;
+            margin: 0 auto;
+            border: none;
+            border-top: 1px solid var(--border);
+        }
+
+        /* ── SECTION ── */
+        .section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 3rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            font-size: 0.72rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 2.5rem;
+        }
+
+        /* ── RESEARCH / WORK GRID ── */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            cursor: pointer;
+        }
+
+        .card-thumb {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background: #f0f0f0;
+            overflow: hidden;
+            margin-bottom: 0.75rem;
+            position: relative;
+        }
+
+        .card-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover .card-thumb img {
+            transform: scale(1.03);
+        }
+
+        /* placeholder colored blocks */
+        .thumb-placeholder {
+            width: 100%;
+            height: 100%;
+            background: #ececec;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .thumb-placeholder span {
+            font-size: 0.65rem;
+            color: #aaa;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .card-label {
+            font-size: 0.82rem;
+            color: var(--fg);
+            line-height: 1.5;
+        }
+
+        .card-venue {
+            font-size: 0.72rem;
+            color: var(--muted);
+            margin-top: 0.15rem;
+        }
+
+        /* ── PUBLICATIONS ── */
+        .pub-list {
+            list-style: none;
+        }
+
+        .pub-item {
+            display: grid;
+            grid-template-columns: 3.5rem 1fr;
+            gap: 0 1.2rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .pub-item:first-child {
+            border-top: 1px solid var(--border);
+        }
+
+        .pub-year {
+            font-size: 0.72rem;
+            color: var(--muted);
+            padding-top: 0.1em;
+        }
+
+        .pub-title {
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+            line-height: 1.5;
+        }
+
+        .pub-venue {
+            font-size: 0.78rem;
+            color: var(--muted);
+            font-style: italic;
+            margin-bottom: 0.3rem;
+        }
+
+        .pub-authors {
+            font-size: 0.78rem;
+            color: #666;
+        }
+
+        .pub-authors .self {
+            color: var(--fg);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .pub-links {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .pub-link {
+            font-size: 0.68rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--muted);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .pub-link:hover {
+            color: var(--fg);
+            border-color: var(--fg);
+        }
+
+        /* ── CV ── */
+        .cv-block {
+            margin-bottom: 2.5rem;
+        }
+
+        .cv-block-title {
+            font-size: 0.72rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 1rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .cv-item {
+            display: grid;
+            grid-template-columns: 6rem 1fr;
+            gap: 0 1.2rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .cv-period {
+            font-size: 0.72rem;
+            color: var(--muted);
+            padding-top: 0.1em;
+        }
+
+        .cv-title {
+            font-size: 0.88rem;
+        }
+
+        .cv-sub {
+            font-size: 0.78rem;
+            color: var(--muted);
+        }
+
+        /* ── CONTACT ── */
+        .contact-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-email {
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--fg);
+            border-bottom: 1px solid var(--border);
+            display: inline-block;
+            padding-bottom: 2px;
+            transition: border-color 0.2s;
+        }
+
+        .contact-email:hover {
+            border-color: var(--fg);
+        }
+
+        .social-row {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .social-row a {
+            font-size: 0.72rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            transition: color 0.2s;
+        }
+
+        .social-row a:hover {
+            color: var(--fg);
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 100%;
+        }
+
+        footer p {
+            font-size: 0.72rem;
+            color: var(--muted);
+            letter-spacing: 0.06em;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 700px) {
+            nav {
+                padding: 1.1rem 1.5rem;
+            }
+
+            .nav-links {
+                gap: 1.5rem;
+            }
+
+            #top {
+                grid-template-columns: 1fr;
+                padding: 6rem 1.5rem 3rem;
+                gap: 2rem;
+            }
+
+            .hero-photo {
+                order: -1;
+                max-width: 180px;
+            }
+
+            .section {
+                padding: 3rem 1.5rem;
+            }
+
+            .card-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.2rem;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 0.4rem;
+                padding: 1.5rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <span class="nav-logo">Koshun Arimura — Personal Page</span>
+        <ul class="nav-links">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- TOP -->
+    <div id="top">
+        <div>
+            <h1 class="hero-name">Koshun Arimura</h1>
+            <p class="hero-name-ja">有村 幸峻</p>
+            <div class="hero-bio">
+                <p>博士後期課程１年 / 九州工業大学 生命体工学研究科 生命体工学専攻</p>
+                <p style="margin-top:0.8rem; color:#888; font-size:0.85rem;">
+                    2026年　九州工業大学大学院生命体工学研究科 博士後期課程 在学中<br>
+                    2026年　九州工業大学大学院 生命体工学研究科 博士前期課程 修了<br>
+                    2024年　九州工業大学 情報工学部 卒業<br>
+                    2022年　鹿児島工業高等専門学校 卒業
+                </p>
+            </div>
+        </div>
+        <div>
+            <!-- 写真を入れる場合は下のコメントを外して src を指定 -->
+            <img src="images/IMG_3464.jpg" class="hero-photo" alt="Your Name">
+        </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- RESEARCH -->
+    <div class="section" id="research">
+        <p class="section-title">Research</p>
+        <div class="card-grid">
+
+            <div class="card">
+                <div class="card-thumb">
+                    <!-- <img src="research1.jpg" alt="Research 1"> -->
+                    <div class="thumb-placeholder"><span>Image</span></div>
+                </div>
+                <p class="card-label">研究プロジェクト名 A</p>
+                <p class="card-venue">[Conference Name] 2024</p>
+            </div>
+
+            <div class="card">
+                <div class="card-thumb">
+                    <div class="thumb-placeholder"><span>Image</span></div>
+                </div>
+                <p class="card-label">研究プロジェクト名 B</p>
+                <p class="card-venue">[Conference Name] 2023</p>
+            </div>
+
+            <div class="card">
+                <div class="card-thumb">
+                    <div class="thumb-placeholder"><span>Image</span></div>
+                </div>
+                <p class="card-label">研究プロジェクト名 C</p>
+                <p class="card-venue">[Conference Name] 2022</p>
+            </div>
+
+        </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- PUBLICATIONS -->
+    <div class="section" id="publications">
+        <p class="section-title">Publications</p>
+        <ul class="pub-list">
+
+            <li class="pub-item">
+                <span class="pub-year">2024</span>
+                <div>
+                    <p class="pub-title">論文タイトル・Paper Title</p>
+                    <p class="pub-venue">Conference / Journal Name</p>
+                    <p class="pub-authors"><span class="self">Your Name</span>, Co-author A, Co-author B</p>
+                    <div class="pub-links">
+                        <a href="#" class="pub-link">Paper ↗</a>
+                        <a href="#" class="pub-link">Slides ↗</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="pub-item">
+                <span class="pub-year">2023</span>
+                <div>
+                    <p class="pub-title">論文タイトル・Paper Title 2</p>
+                    <p class="pub-venue">Conference / Journal Name</p>
+                    <p class="pub-authors">Co-author A, <span class="self">Your Name</span></p>
+                    <div class="pub-links">
+                        <a href="#" class="pub-link">Paper ↗</a>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- CV -->
+    <div class="section" id="cv">
+        <p class="section-title">CV</p>
+
+        <div class="cv-block">
+            <p class="cv-block-title">Education</p>
+            <div class="cv-item">
+                <span class="cv-period">2022 –</span>
+                <div>
+                    <p class="cv-title">博士後期課程 / PhD in [Field]</p>
+                    <p class="cv-sub">[大学名]</p>
+                </div>
+            </div>
+            <div class="cv-item">
+                <span class="cv-period">2020 – 2022</span>
+                <div>
+                    <p class="cv-title">修士課程 / M.S. in [Field]</p>
+                    <p class="cv-sub">[大学名]</p>
+                </div>
+            </div>
+            <div class="cv-item">
+                <span class="cv-period">2016 – 2020</span>
+                <div>
+                    <p class="cv-title">学部 / B.S. in [Field]</p>
+                    <p class="cv-sub">[大学名]</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cv-block">
+            <p class="cv-block-title">Awards &amp; Grants</p>
+            <div class="cv-item">
+                <span class="cv-period">2023</span>
+                <div>
+                    <p class="cv-title">フェローシップ / 奨学金名</p>
+                    <p class="cv-sub">財団・機関名</p>
+                </div>
+            </div>
+            <div class="cv-item">
+                <span class="cv-period">2022</span>
+                <div>
+                    <p class="cv-title">Best Paper Award</p>
+                    <p class="cv-sub">学会名</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="cv.pdf" target="_blank"
+            style="font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); border-bottom:1px solid var(--border); padding-bottom:2px;">
+            Full CV (PDF) ↗
+        </a>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- CONTACT -->
+    <div class="section" id="contact">
+        <p class="section-title">Contact</p>
+        <div class="contact-wrap">
+            <p>arimurakoshun523@mail.kyutech.jp</p>
+            <div class="social-row">
+                <a href="https://twitter.com/yourname" target="_blank">X / Twitter</a>
+                <a href="https://linkedin.com/in/yourname" target="_blank">LinkedIn</a>
+                <a href="https://github.com/yourname" target="_blank">GitHub</a>
+                <a href="https://scholar.google.com" target="_blank">Scholar</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Koshun Arimura</p>
+        <p>Hosted on GitHub Pages</p>
+    </footer>
+
+    <script>
+        // Nav scroll
+        window.addEventListener('scroll', () =>
+            document.querySelector('nav').style.boxShadow =
+            scrollY > 10 ? '0 1px 12px rgba(0,0,0,0.06)' : 'none'
+        );
+
+        // Scroll reveal
+        const io = new IntersectionObserver(
+            entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+            { threshold: 0.08 }
+        );
+        document.querySelectorAll('.section').forEach(s => io.observe(s));
+    </script>
+</body>
+
+</html>

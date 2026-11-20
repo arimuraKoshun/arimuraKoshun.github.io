@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arimurakoshun.github.io/sitemap.xml

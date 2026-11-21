@@ -1,257 +1,94 @@
-<!DOCTYPE html>
-<html lang="ja">
-
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Koshun Arimura | Arimura Koshun | 有村幸峻</title>
-    <meta name="description"
-        content="Personal website of Koshun Arimura (有村幸峻 / Arimura Koshun). Ph.D. student researching robotics, Physical AI, foundation models, environmental understanding, HRI, and VLA.">
-    <meta name="keywords"
-        content="有村幸峻, Koshun Arimura, Arimura Koshun, Arimura Koushun, robotics, Physical AI, foundation models, LLM, VLM, VLA, HRI">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+JP:wght@300;400&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Koshun Arimura is a Ph.D. student at Kyushu Institute of Technology researching open-world robotics and human-robot interaction.">
+    <title>Koshun Arimura — Robotics Researcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&family=Oswald:wght@400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Koshun Arimura",
-      "alternateName": [
-        "Arimura Koshun",
-        "有村幸峻",
-        "Arimura Koushun"
-      ],
-      "url": "https://arimurakoshun.github.io",
-      "jobTitle": "Ph.D. Student",
-      "affiliation": {
-        "@type": "CollegeOrUniversity",
-        "name": "Kyushu Institute of Technology"
-      },
-      "knowsAbout": [
-        "Robotics",
-        "Physical AI",
-        "Foundation Models",
-        "LLM",
-        "VLM",
-        "VLA",
-        "Human-Robot Interaction",
-        "Environmental Understanding"
-      ]
-    }
+    {"@context":"https://schema.org","@type":"Person","name":"Koshun Arimura","alternateName":["Arimura Koshun","有村幸峻"],"url":"https://arimurakoshun.github.io","jobTitle":"Ph.D. Student","affiliation":{"@type":"CollegeOrUniversity","name":"Kyushu Institute of Technology"},"knowsAbout":["Open-World Robotics","Human-Robot Interaction","Robot Action Models"]}
     </script>
+    <script src="main.js" defer></script>
 </head>
-
-<body data-page="home" data-masthead="est. 2026">
-
-    <!-- ── shared chrome (rendered by main.js) ───────────────────── -->
-    <nav id="site-nav"></nav>
-
-    <!-- ═══════════ HERO / TOP ═════════════════════════════════════ -->
-    <div id="top">
-        <div>
-            <p class="hero-eyebrow">Doctoral Researcher</p>
-            <h1 class="hero-name">Koshun Arimura</h1>
-            <p class="hero-name-ja">有村幸峻</p>
-
-            <p class="hero-lead">
-                Exploring the intersection of life sciences and engineering —<br>one experiment at a time.
-            </p>
-
-            <div class="hero-bio">
-                <p>博士後期課程１年 / 九州工業大学生命体工学研究科</p>
+<body data-page="about">
+    <div id="site-sidebar"></div>
+    <main class="page-main">
+        <section class="about-hero content" id="about" aria-labelledby="about-title">
+            <p class="eyebrow top-eyebrow">About</p>
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <h1 id="about-title">Koshun Arimura</h1>
+                    <p class="specialties">Specialties: Open-World Robotics · Human-Robot Interaction</p>
+                    <div class="intro-copy">
+                        <p>I am a first-year Ph.D. student at Kyushu Institute of Technology.<br>My research explores how robots can perceive, collaborate, and act in dynamic environments.</p>
+                    </div>
+                    <div class="hero-detail">
+                        <h2 class="eyebrow">Focus Areas</h2>
+                        <ol class="focus-list">
+                            <li><span class="focus-index">01</span>Environmental Understanding</li>
+                            <li><span class="focus-index">02</span>Human–Robot Interaction</li>
+                            <li><span class="focus-index">03</span>Robot Action Model</li>
+                        </ol>
+                    </div>
+                    <div class="hero-detail tools-detail">
+                        <h2 class="eyebrow">Tools &amp; Methods</h2>
+                        <dl class="tool-list">
+                            <div><dt>Robotics</dt><dd>ROS 2 · MoveIt 2 · Nav2 · RViz</dd></div>
+                            <div><dt>AI &amp; Vision</dt><dd>PyTorch · OpenCV · Foundation Models</dd></div>
+                            <div><dt>Simulation</dt><dd>Isaac Sim · Gazebo · Habitat-Sim</dd></div>
+                            <div><dt>Development</dt><dd>Python · Linux · Docker · Git</dd></div>
+                        </dl>
+                    </div>
+                </div>
+                <figure class="portrait"><img src="images/portrait-circle.png" alt="Koshun Arimura with a service robot" width="260" height="260"></figure>
             </div>
-        </div>
-        <div>
-            <div class="hero-photo-wrap">
-                <img src="images/肖像画.jpg" class="hero-photo" alt="Koshun Arimura">
-            </div>
-            <p class="hero-photo-caption">— Portrait, 2026</p>
-        </div>
+        </section>
 
-        <div class="hero-intro">
-            <p>Koshun Arimura（有村幸峻 / Arimura Koshun）is a first-year Ph.D. student exploring the future of Physical AI.</p>
-            <p>I aim to build general-purpose robotic systems that integrate <abbr title="Large Language Model">LLM</abbr>s, <abbr title="Vision-Language Model">VLM</abbr>s, and <abbr title="Vision-Language-Action Model">VLA</abbr>s to understand and act in diverse real-world environments.</p>
-        </div>
-    </div>
+        <section class="section-shell" id="cv" aria-labelledby="cv-title">
+            <div class="content">
+                <h2 class="section-title" id="cv-title">Curriculum Vitae</h2>
+                <h3 class="eyebrow section-eyebrow">Education</h3>
+                <div class="cv-list">
+                    <div class="cv-row"><span class="year">2026 –</span><div><p>Kyushu Institute of Technology · Doctoral</p><p>Graduate School of Life Science and Systems Engineering</p></div></div>
+                    <div class="cv-row"><span class="year">2024 – 2026</span><div><p>Kyushu Institute of Technology · Master’s</p><p>Graduate School of Life Science and Systems Engineering</p></div></div>
+                    <div class="cv-row"><span class="year">2022 – 2024</span><div><p>Kyushu Institute of Technology · Bachelor’s</p><p>School of Computer Science and Systems Engineering</p><p>Department of Intelligent and Control Systems</p></div></div>
+                    <div class="cv-row"><span class="year">2017 – 2022</span><div><p>National Institute of Technology, Kagoshima College · KOSEN</p><p>Department of Electrical and Electronic Engineering</p></div></div>
+                </div>
 
-    <!-- ═══════════ N° 01 · RESEARCH ═══════════════════════════════ -->
-    <div class="section" id="research">
-        <div class="section-head">
-            <span class="section-num">N° 01</span>
-            <h2 class="section-title">Research<span class="ja">研究</span></h2>
-        </div>
-        <div class="research-summary">
-            <div class="research-figure">
-                <img src="images/research-overview.png" alt="Research overview: 環境理解 / HRI / VLA">
-            </div>
-            <div class="research-body">
-                <p class="research-eyebrow">Current Research</p>
-                <h3 class="research-title">開かれた環境に適応するロボット</h3>
-                <div class="research-text">
-                    <p>
-                        開かれた環境とは，物体の配置や人の行動，タスクの内容が事前に決まっておらず，状況が動的に変化する実世界の環境です．私は，このような環境に適応し，人と協調しながら柔軟に行動できるロボットの実現を目指しています．
-                    </p>
-                    <p>
-                        そのために，環境理解，<abbr title="Human–Robot Interaction">HRI</abbr>（Human–Robot Interaction），<abbr title="Vision–Language–Action Model">VLA</abbr>（Vision–Language–Action Model）を軸として，ロボットが周囲の状況を理解し，人の意図を汲み取り，視覚・言語・行動を統合して振る舞うための研究に取り組んでいます．基盤モデルをロボットシステムに統合することで，実世界で機能する Physical AI の構築を目指しています．
-                    </p>
+                <h3 class="eyebrow section-eyebrow fellowship-heading">Fellowship</h3>
+                <div class="cv-list">
+                    <div class="cv-row"><span class="year">2026 –</span><div><p>JST SPRING · Selected</p><p>Support for Pioneering Research Initiated by the Next Generation</p></div></div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- ═══════════ N° 02 · CV ═════════════════════════════════════ -->
-    <div class="section" id="cv">
-        <div class="section-head">
-            <span class="section-num">N° 02</span>
-            <h2 class="section-title">Curriculum Vitae<span class="ja">経歴</span></h2>
-        </div>
-
-        <div class="cv-block">
-            <p class="cv-block-title">Education</p>
-
-            <!-- Add new entries by duplicating .cv-item blocks below. -->
-            <div class="cv-item">
-                <span class="cv-period">2026 –</span>
-                <div>
-                    <p class="cv-title">九州工業大学大学院 生命体工学研究科</p>
-                    <p class="cv-sub">博士後期課程</p>
+        <section class="section-shell" id="competitions" aria-labelledby="competitions-title">
+            <div class="content">
+                <h2 class="section-title" id="competitions-title">Robotics Competitions</h2>
+                <p class="eyebrow section-eyebrow">Participation History</p>
+                <div class="competition-list">
+                    <div class="competition-row"><span class="year">2026</span><ul><li>RoboCup 2026 — Incheon, South Korea</li><li>RoboCup@Home 2026 — Japan Open</li><li>Humanoid G1 Hackathon — Toyota Auto Body Research Institute</li></ul></div>
+                    <div class="competition-row"><span class="year">2025</span><ul><li>RoboCup@Home 2025 — Japan Open</li><li>WRS 2025 Future Convenience Store Challenge</li></ul></div>
+                    <div class="competition-row"><span class="year">2024</span><ul><li>RoboCup 2024 — Eindhoven, Netherlands</li><li>RoboCup JapanOpen 2024</li></ul></div>
+                    <div class="competition-row"><span class="year">2023</span><ul><li>All Japan Robot Sumo Tournament</li><li>ROBO-KEN</li><li>10th Tomato Robot Competition</li></ul></div>
+                    <div class="competition-row"><span class="year">2022</span><ul><li>RoboCup JapanOpen 2022 — Rescue League</li></ul></div>
+                    <div class="competition-row"><span class="year">2017 – 2021</span><ul><li>Battle of Ideas: National College of Technology Robot Contest (Kosen Robocon)</li></ul></div>
                 </div>
             </div>
-            <div class="cv-item">
-                <span class="cv-period">2024 – 2026</span>
-                <div>
-                    <p class="cv-title">九州工業大学大学院 生命体工学研究科</p>
-                    <p class="cv-sub">博士前期課程</p>
-                </div>
+        </section>
+
+        <section class="section-shell contact-section" id="contact" aria-labelledby="contact-title">
+            <div class="content">
+                <h2 class="section-title" id="contact-title">Contact</h2>
+                <p>For research and collaboration, please reach out by email.</p>
+                <a href="mailto:arimurakoshun523@mail.kyutech.jp">arimurakoshun523@mail.kyutech.jp</a>
             </div>
-            <div class="cv-item">
-                <span class="cv-period">2022 – 2024</span>
-                <div>
-                    <p class="cv-title">九州工業大学 情報工学部 知的システム工学科</p>
-                    <p class="cv-sub">編入学・卒業</p>
-                </div>
-            </div>
-            <div class="cv-item">
-                <span class="cv-period">2017 – 2022</span>
-                <div>
-                    <p class="cv-title">鹿児島工業高等専門学校 電気電子工学科</p>
-                    <p class="cv-sub">本科</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="cv-block">
-            <p class="cv-block-title">Fellowship</p>
-            <div class="cv-item">
-                <span class="cv-period">2026 –</span>
-                <div>
-                    <p class="cv-title">JST次世代研究者挑戦的研究プログラム (SPRING)</p>
-                    <p class="cv-sub">採択</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="cv-block">
-            <p class="cv-block-title">Service</p>
-            <div class="cv-item">
-                <span class="cv-period">2026</span>
-                <div>
-                    <p class="cv-title">
-                        <a class="cv-link" href="https://sites.google.com/view/robocup-athome-sim/japanopen-2026"
-                            target="_blank" rel="noopener">RoboCup@Home Simulation Japan Open 2026</a>
-                    </p>
-                    <p class="cv-sub">Organizing Committee</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ═══════════ N° 03 · ROBOTICS ═══════════════════════════════ -->
-    <!-- Tag variants: .gold / .silver / .bronze / .special / .attended -->
-    <div class="section" id="robotics">
-        <div class="section-head">
-            <span class="section-num">N° 03</span>
-            <h2 class="section-title">Robotics<span class="ja">ロボットコンペティション</span></h2>
-        </div>
-
-        <ul class="robot-list">
-
-            <li class="robot-item">
-                <span class="robot-year">2026</span>
-                <div class="robot-body">
-                    <p class="robot-name">RoboCup@Home 2026【日本大会】</p>
-                    <p class="robot-name">トヨタ車体研究所 ヒューマノイドG1 ハッカソン</p>
-                </div>
-            </li>
-
-            <li class="robot-item">
-                <span class="robot-year">2025</span>
-                <div class="robot-body">
-                    <p class="robot-name">RoboCup@Home 2025【日本大会】</p>
-                    <p class="robot-name">WRS2025 Future Convenience Store Challenge</p>
-                </div>
-            </li>
-
-            <li class="robot-item">
-                <span class="robot-year">2024</span>
-                <div class="robot-body">
-                    <p class="robot-name">RoboCup@Home 2024【世界大会】</p>
-                </div>
-            </li>
-
-            <li class="robot-item">
-                <span class="robot-year">2023</span>
-                <div class="robot-body">
-                    <p class="robot-name">全日本ロボット相撲大会</p>
-                    <p class="robot-name">ROBO-剣</p>
-                </div>
-            </li>
-
-            <li class="robot-item">
-                <span class="robot-year">2022</span>
-                <div class="robot-body">
-                    <p class="robot-name">RoboCup JapanOpen 2022【日本大会】<span class="robot-name-sub">— レスキューリーグ</span></p>
-                </div>
-            </li>
-
-            <li class="robot-item">
-                <span class="robot-year">2017 – 2021</span>
-                <div class="robot-body">
-                    <p class="robot-name">アイデア対決・全国高等専門学校ロボットコンテスト</p>
-                </div>
-            </li>
-
-        </ul>
-    </div>
-
-    <!-- ═══════════ N° 04 · CONTACT ════════════════════════════════ -->
-    <div class="section" id="contact">
-        <div class="section-head">
-            <span class="section-num">N° 04</span>
-            <h2 class="section-title">Contact<span class="ja">連絡先</span></h2>
-        </div>
-        <div class="contact-grid">
-            <p class="contact-pull">
-                Let's<span class="mark"> talk</span> — research, collaboration, or anything in between.
-            </p>
-            <div class="contact-wrap">
-                <div>
-                    <p class="contact-label">Email</p>
-                    <p class="contact-email">
-                        arimurakoshun523 [at] mail.kyutech.jp
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ── shared chrome (rendered by main.js) ───────────────────── -->
-    <footer id="site-footer"></footer>
-    <script src="main.js"></script>
+        </section>
+        <footer id="site-footer"></footer>
+    </main>
 </body>
-
 </html>

@@ -1,150 +1,70 @@
-<!DOCTYPE html>
-<html lang="ja">
-
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Awards — Koshun Arimura</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Noto+Sans+JP:wght@300;400&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Academic awards and robotics competition results of Koshun Arimura.">
+    <title>Awards &amp; Honors — Koshun Arimura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&family=Oswald:wght@400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
 </head>
+<body data-page="awards">
+    <div id="site-sidebar"></div>
+    <main class="page-main">
+        <div class="content page-content">
+            <header class="page-header">
+                <p class="eyebrow top-eyebrow">Awards</p>
+                <h1>Awards &amp; Honors</h1>
+                <p>Academic recognition and robotics competition results.</p>
+            </header>
 
-<body data-page="awards" data-masthead="Awards">
-
-    <!-- ── shared chrome (rendered by main.js) ───────────────────── -->
-    <nav id="site-nav"></nav>
-
-    <!-- ═══════════ PAGE HEAD ═════════════════════════════════════ -->
-    <header class="page-head">
-        <a href="index.html#cv" class="page-back">← Back to CV</a>
-        <p class="page-head-eyebrow">Appendix</p>
-        <h1 class="page-head-title">Awards <span class="ja">受賞</span></h1>
-        <p class="page-head-sub">
-            Awards and honors received at international conferences and robot competitions.
-        </p>
-    </header>
-
-    <!-- ═══════════ AWARDS LIST ═══════════════════════════════════ -->
-    <div class="section">
-
-        <!-- Academic Awards -->
-        <div class="cv-block">
-            <p class="cv-block-title">Academic Awards</p>
-
-            <div class="cv-item">
-                <span class="cv-period">2026.01</span>
-                <div>
-                    <p class="cv-title">IWAIT 2026 Best Paper Award</p>
-                    <p class="cv-sub">International Workshop on Advanced Image Technology</p>
+            <section class="awards-section" aria-labelledby="academic-awards-title">
+                <h2 class="eyebrow section-eyebrow" id="academic-awards-title">Academic Recognition</h2>
+                <div class="award-year-group">
+                    <span class="year">2026</span>
+                    <div class="award-entries">
+                        <div class="award-entry"><h3>Best Paper Award · IWAIT 2026</h3><p class="award-description">International Workshop on Advanced Image Technology</p></div>
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            <section class="awards-section" aria-labelledby="robotics-awards-title">
+                <h2 class="eyebrow section-eyebrow" id="robotics-awards-title">Robotics Competitions</h2>
+                <div class="award-year-group">
+                    <span class="year">2026</span>
+                    <div class="award-entries">
+                        <div class="award-entry"><h3>RoboCup@Home Japan Open 2026 · S-OPL Open Challenge</h3><p class="award-meta"><strong>Winner</strong><span>Team Leader</span></p></div>
+                        <div class="award-entry"><h3>RoboCup@Home Japan Open 2026 · S-OPL Task</h3><p class="award-meta"><strong>Runner-up</strong><span>Team Leader</span></p></div>
+                        <div class="award-entry"><h3>Toyota Auto Body Research Institute · Humanoid G1 Hackathon</h3><p class="award-meta"><strong>Winner</strong><span>Team Leader</span></p></div>
+                    </div>
+                </div>
+                <div class="award-year-group">
+                    <span class="year">2025</span>
+                    <div class="award-entries">
+                        <div class="award-entry"><h3>WRS 2025 Future Convenience Store Challenge<br>Stock and Disposal Task</h3><p class="award-meta"><strong>Daily Winner ×2</strong><span>Development Lead</span></p></div>
+                        <div class="award-entry"><h3>RoboCup@Home Japan Open 2025 · OPL Open Challenge</h3><p class="award-meta"><strong>Winner</strong><span>Team Leader</span></p></div>
+                        <div class="award-entry"><h3>RoboCup@Home Japan Open 2025 · S-OPL Open Challenge</h3><p class="award-meta"><strong>Winner</strong><span>Main Developer</span></p></div>
+                    </div>
+                </div>
+                <div class="award-year-group">
+                    <span class="year">2024</span>
+                    <div class="award-entries">
+                        <div class="award-entry"><h3>RoboCup 2024 · @Home DSPL League</h3><p class="award-meta"><strong>Winner</strong><span>Main Task Developer</span></p></div>
+                        <div class="award-entry"><h3>RoboCup 2024 · @Home DSPL Robo-host</h3><p class="award-meta"><strong>Highest Score</strong><span>Party-Host, Stage I · Main Developer</span></p></div>
+                    </div>
+                </div>
+                <div class="award-year-group">
+                    <span class="year">2022</span>
+                    <div class="award-entries">
+                        <div class="award-entry"><h3>RoboCup JapanOpen 2022 · Rescue Robot League</h3><p class="award-meta"><strong>Third Place</strong><span>Image Processing System Developer</span></p></div>
+                    </div>
+                </div>
+            </section>
         </div>
-
-        <!-- Robotics Competitions -->
-        <div class="cv-block">
-            <p class="cv-block-title">Robotics Competitions</p>
-
-            <ul class="robot-list">
-
-                <li class="robot-item">
-                    <span class="robot-year">2026</span>
-                    <div class="robot-body">
-                        <div class="award-entry">
-                            <p class="robot-name">RoboCup@Home 2026【日本大会】S-OPL Open Challenge</p>
-                            <p class="robot-sub">チームリーダー</p>
-                            <div class="tag-row">
-                                <span class="tag gold"><span class="tag-icon">🥇</span>優勝</span>
-                            </div>
-                        </div>
-                        <div class="award-entry">
-                            <p class="robot-name">RoboCup@Home 2026【日本大会】S-OPL Task</p>
-                            <p class="robot-sub">チームリーダー</p>
-                            <div class="tag-row">
-                                <span class="tag silver"><span class="tag-icon">🥈</span>準優勝</span>
-                            </div>
-                        </div>
-                        <div class="award-entry">
-                            <p class="robot-name">トヨタ車体研究所 知能センター ヒューマノイドG1 ハッカソン</p>
-                            <p class="robot-sub">チームリーダー</p>
-                            <div class="tag-row">
-                                <span class="tag gold"><span class="tag-icon">🥇</span>優勝</span>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="robot-item">
-                    <span class="robot-year">2025</span>
-                    <div class="robot-body">
-                        <div class="award-entry">
-                            <p class="robot-name">WRS2025 Future Convenience Store Challenge (FCSC) Stock and Disposal Task</p>
-                            <p class="robot-sub">開発リーダー</p>
-                            <div class="tag-row">
-                                <span class="tag special"><span class="tag-icon">★</span>Daily Winner ×2</span>
-                            </div>
-                        </div>
-                        <div class="award-entry">
-                            <p class="robot-name">RoboCup@Home 2025【日本大会】OPL Open Challenge</p>
-                            <p class="robot-sub">チームリーダー</p>
-                            <div class="tag-row">
-                                <span class="tag gold"><span class="tag-icon">🥇</span>優勝</span>
-                            </div>
-                        </div>
-                        <div class="award-entry">
-                            <p class="robot-name">RoboCup@Home 2025【日本大会】S-OPL Open Challenge</p>
-                            <p class="robot-sub">メイン開発</p>
-                            <div class="tag-row">
-                                <span class="tag gold"><span class="tag-icon">🥇</span>優勝</span>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="robot-item">
-                    <span class="robot-year">2024</span>
-                    <div class="robot-body">
-                        <div class="award-entry">
-                            <p class="robot-name">RoboCup@Home 2024【世界大会】DSPL リーグ</p>
-                            <p class="robot-sub">タスクメイン開発</p>
-                            <div class="tag-row">
-                                <span class="tag gold"><span class="tag-icon">🥇</span>優勝</span>
-                            </div>
-                        </div>
-                        <div class="award-entry">
-                            <p class="robot-name">RoboCup@Home 2024【世界大会】DSPL リーグ Robo-host</p>
-                            <p class="robot-sub">Party-Host highest score in Stage I tasks ／ メイン開発</p>
-                            <div class="tag-row">
-                                <span class="tag special"><span class="tag-icon">★</span>Highest Score</span>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="robot-item">
-                    <span class="robot-year">2022</span>
-                    <div class="robot-body">
-                        <div class="award-entry">
-                            <p class="robot-name">RoboCup JapanOpen 2022【日本大会】レスキュー実機リーグ</p>
-                            <p class="robot-sub">画像処理システム開発</p>
-                            <div class="tag-row">
-                                <span class="tag bronze"><span class="tag-icon">🥉</span>第3位</span>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-            </ul>
-        </div>
-
-    </div>
-
-    <!-- ── shared chrome (rendered by main.js) ───────────────────── -->
-    <footer id="site-footer"></footer>
-    <script src="main.js"></script>
+        <footer id="site-footer"></footer>
+    </main>
 </body>
-
 </html>

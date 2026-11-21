@@ -9,7 +9,7 @@ const links = [
     { id: 'about', label: 'About', href: 'index.html#about' },
     { id: 'publications', label: 'Publications', href: 'publications.html' },
     { id: 'awards', label: 'Awards', href: 'awards.html' },
-    { id: 'cv', label: 'CV', href: 'index.html#cv' },
+    { id: 'cv', label: 'CV', href: 'https://drive.google.com/file/d/1xxpqyVTEw8NTMN-69hKBbmtLLa6-XXoB/view?usp=sharing', external: true },
     { id: 'contact', label: 'Contact', href: 'index.html#contact' },
 ];
 
@@ -22,9 +22,10 @@ const icons = {
 function renderSidebar() {
     const mount = document.getElementById('site-sidebar');
     if (!mount) return;
-    const nav = links.map(({ id, label, href }) => {
+    const nav = links.map(({ id, label, href, external }) => {
         const current = id === page ? ' aria-current="page"' : '';
-        return `<a href="${href}"${current}>${label}</a>`;
+        const target = external ? ' target="_blank" rel="noopener noreferrer"' : '';
+        return `<a href="${href}"${current}${target}>${label}</a>`;
     }).join('');
     mount.innerHTML = `
         <aside class="site-sidebar">

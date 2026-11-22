@@ -76,9 +76,8 @@ h1, h2, h3, p, figure, ol, ul, dl, dd { margin: 0; }
     letter-spacing: .11em;
     text-transform: uppercase;
 }
-.top-eyebrow { padding: 51px 0 13px; border-bottom: 1px solid var(--line); }
-
-.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 30px; padding: 35px 0 45px; }
+.about-hero { padding-top: 80px; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 30px; padding: 0 0 45px; }
 .hero-copy h1, .page-header h1 {
     font-family: var(--serif);
     font-size: clamp(38px, 3.7vw, 44px);
@@ -122,9 +121,7 @@ h1, h2, h3, p, figure, ol, ul, dl, dd { margin: 0; }
 .contact-section a { display: inline-block; margin-top: 13px; color: var(--accent-dark); text-decoration-color: var(--accent); text-underline-offset: 4px; overflow-wrap: anywhere; }
 
 .page-content { padding-bottom: 48px; }
-.page-header { padding-bottom: 31px; border-bottom: 1px solid var(--line); }
-.page-header h1 { margin-top: 31px; }
-.page-header > p:last-child { margin-top: 15px; color: var(--soft); }
+.page-header { padding: 80px 0 31px; border-bottom: 1px solid var(--line); }
 .year-group { display: grid; grid-template-columns: 142px minmax(0, 1fr); gap: 0; padding: 26px 0 30px; border-bottom: 1px solid var(--line); }
 .year-group .year { font-size: 19px; }
 .citation-list { list-style: none; padding: 0; }
@@ -164,7 +161,7 @@ h1, h2, h3, p, figure, ol, ul, dl, dd { margin: 0; }
     .social-link, .social-link svg { width: 19px; height: 19px; }
     .page-main { margin-left: 0; }
     .content { width: min(824px, calc(100% - 50px)); }
-    .top-eyebrow { padding-top: 33px; }
+    .about-hero, .page-header { padding-top: 48px; }
 }
 
 @media (max-width: 680px) {
@@ -173,7 +170,7 @@ h1, h2, h3, p, figure, ol, ul, dl, dd { margin: 0; }
     .sidebar-nav a { font-size: 10px; letter-spacing: .07em; }
     .social-links { gap: 18px; }
     .content { width: calc(100% - 36px); }
-    .hero-grid { display: flex; flex-direction: column-reverse; gap: 23px; padding-top: 26px; }
+    .hero-grid { display: flex; flex-direction: column-reverse; gap: 23px; }
     .portrait img { width: 160px; height: 160px; }
     .hero-copy h1, .page-header h1 { font-size: 38px; }
     .specialties { font-size: 16px; }

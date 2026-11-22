@@ -130,6 +130,7 @@ h1, h2, h3, p, figure, ol, ul, dl, dd { margin: 0; }
 .citation-list li { font-family: var(--serif); font-size: 15.5px; line-height: 1.65; overflow-wrap: break-word; }
 .citation-list li[lang="ja"] { font-family: 'Noto Sans JP', sans-serif; font-size: 15px; line-height: 1.75; }
 .citation-list li + li { margin-top: 26px; }
+.citation-list .author-name { font-weight: 700; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .citation-list a { color: var(--accent-dark); text-decoration: underline; text-underline-offset: 3px; }
 
 .awards-section { padding-top: 26px; }

@@ -129,7 +129,7 @@ h1, h2, h3, p, figure, ol, ul, dl, dd { margin: 0; }
 .citation-list { list-style: none; padding: 0; }
 .citation-list li { font-family: var(--serif); font-size: 15.5px; line-height: 1.65; overflow-wrap: break-word; }
 .citation-list li[lang="ja"] { font-family: 'Noto Sans JP', sans-serif; font-size: 15px; line-height: 1.75; }
-.citation-list li + li { margin-top: 32px; }
+.citation-list li + li { margin-top: 26px; }
 .citation-list a { color: var(--accent-dark); text-decoration: underline; text-underline-offset: 3px; }
 
 .awards-section { padding-top: 26px; }
@@ -183,7 +183,7 @@ h1, h2, h3, p, figure, ol, ul, dl, dd { margin: 0; }
     .cv-row p { font-size: 16px; }
     .year { font-size: 16px; }
     .year-group { padding: 22px 0 27px; }
-    .citation-list li + li { margin-top: 25px; }
+    .citation-list li + li { margin-top: 20px; }
     .award-meta strong { min-width: 112px; }
     .footer-content { flex-direction: column; gap: 3px; }
 }

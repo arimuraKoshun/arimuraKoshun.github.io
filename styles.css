@@ -91,8 +91,9 @@ h1, h2, h3, p, figure, ol, ul, dl, dd { margin: 0; }
 .intro-copy p { line-height: 1.7; }
 .hero-detail { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line); }
 .focus-list { list-style: none; padding: 0; margin-top: 15px; }
-.focus-list li { display: flex; gap: 15px; align-items: baseline; padding: 6px 0; font-family: var(--serif); font-size: 17px; }
+.focus-list li { display: flex; gap: 15px; align-items: baseline; padding: 4px 0; font-family: var(--serif); font-size: 17px; }
 .focus-index { flex: 0 0 16px; font-family: var(--numbers); font-size: 14px; }
+.focus-ampersand { font-family: var(--sans); }
 .tools-detail { margin-top: 10px; padding-top: 13px; }
 .tool-list { margin-top: 11px; }
 .tool-list > div { display: grid; grid-template-columns: 142px minmax(0, 1fr); gap: 0; padding: 2px 0; }

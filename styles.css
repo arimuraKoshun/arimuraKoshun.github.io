@@ -122,12 +122,12 @@ h1, h2, h3, p, figure, ol, ul, dl, dd { margin: 0; }
 
 .page-content { padding-bottom: 48px; }
 .page-header { padding: 80px 0 31px; }
-.year-group { display: grid; grid-template-columns: 142px minmax(0, 1fr); gap: 0; padding: 20px 0; }
+.year-group { display: grid; grid-template-columns: 142px minmax(0, 1fr); gap: 0; margin-top: 20px; padding: 24px; border: 1px solid #e1e5e7; border-radius: 12px; background: #fff; box-shadow: 0 2px 8px rgb(42 42 42 / 4%); }
 .year-group .year { font-size: 19px; }
 .citation-list { list-style: none; padding: 0; }
-.citation-list li { padding: 16px 18px; border: 1px solid #e1e5e7; border-radius: 4px; background: #fff; box-shadow: 0 2px 8px rgb(42 42 42 / 4%); font-family: var(--serif); font-size: 15.5px; line-height: 1.65; overflow-wrap: break-word; }
+.citation-list li { font-family: var(--serif); font-size: 15.5px; line-height: 1.65; overflow-wrap: break-word; }
 .citation-list li[lang="ja"] { font-family: 'Noto Sans JP', sans-serif; font-size: 15px; line-height: 1.75; }
-.citation-list li + li { margin-top: 12px; }
+.citation-list li + li { margin-top: 20px; }
 .citation-list .author-name { font-weight: 700; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .citation-list a { color: var(--accent-dark); text-decoration: underline; text-underline-offset: 3px; }
 

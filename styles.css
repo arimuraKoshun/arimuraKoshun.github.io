@@ -66,7 +66,7 @@ h1, h2, h3, p, figure, ol, ul, dl, dd { margin: 0; }
 .social-link svg { width: 22px; height: 22px; }
 
 .page-main { min-height: 100vh; margin-left: var(--sidebar-width); }
-.content { width: min(824px, calc(100% - 80px)); margin-inline: auto; background: #fff; }
+.content { width: min(824px, calc(100% - 80px)); margin-inline: auto; }
 .eyebrow {
     color: var(--accent-dark);
     font-family: var(--sans);
@@ -121,23 +121,23 @@ h1, h2, h3, p, figure, ol, ul, dl, dd { margin: 0; }
 .contact-section a { display: inline-block; margin-top: 13px; color: var(--accent-dark); text-decoration-color: var(--accent); text-underline-offset: 4px; overflow-wrap: anywhere; }
 
 .page-content { padding-bottom: 48px; }
-.page-header { padding: 80px 0 31px; border-bottom: 1px solid var(--line); }
-.year-group { display: grid; grid-template-columns: 142px minmax(0, 1fr); gap: 0; padding: 26px 0 30px; border-bottom: 1px solid var(--line); }
+.page-header { padding: 80px 0 31px; }
+.year-group { display: grid; grid-template-columns: 142px minmax(0, 1fr); gap: 0; padding: 20px 0; }
 .year-group .year { font-size: 19px; }
 .citation-list { list-style: none; padding: 0; }
-.citation-list li { font-family: var(--serif); font-size: 15.5px; line-height: 1.65; overflow-wrap: break-word; }
+.citation-list li { padding: 16px 18px; background: #fff; font-family: var(--serif); font-size: 15.5px; line-height: 1.65; overflow-wrap: break-word; }
 .citation-list li[lang="ja"] { font-family: 'Noto Sans JP', sans-serif; font-size: 15px; line-height: 1.75; }
-.citation-list li + li { margin-top: 26px; }
+.citation-list li + li { margin-top: 12px; }
 .citation-list .author-name { font-weight: 700; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .citation-list a { color: var(--accent-dark); text-decoration: underline; text-underline-offset: 3px; }
 
 .awards-section { padding-top: 26px; }
 .awards-section + .awards-section { padding-top: 28px; }
 .awards-section .section-eyebrow { margin: 0 0 13px; }
-.award-year-group { display: grid; grid-template-columns: 142px minmax(0, 1fr); padding: 18px 0 29px; border-top: 1px solid var(--line); }
-.award-year-group:last-child { border-bottom: 1px solid var(--line); }
+.award-year-group { display: grid; grid-template-columns: 142px minmax(0, 1fr); padding: 12px 0; }
 .award-year-group .year { font-size: 19px; }
-.award-entry + .award-entry { margin-top: 32px; }
+.award-entry { padding: 16px 18px; background: #fff; }
+.award-entry + .award-entry { margin-top: 12px; }
 .award-entry h3 { font-family: var(--serif); font-size: 18px; font-weight: 400; line-height: 1.4; }
 .award-description { margin-top: 7px; color: var(--soft); font-size: 13px; }
 .award-meta { display: flex; flex-wrap: wrap; gap: 7px 26px; margin-top: 7px; font-size: 13px; }

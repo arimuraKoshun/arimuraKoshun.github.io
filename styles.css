@@ -52,7 +52,7 @@ h1, h2, h3, p, figure, ol, ul, dl, dd { margin: 0; }
     transition: color .2s ease;
 }
 .sidebar-nav a:hover, .sidebar-nav a[aria-current="page"] { color: var(--accent); }
-.language-switch { display: flex; align-items: center; gap: 7px; margin-top: 28px; color: #89979c; font-size: 12px; letter-spacing: .04em; }
+.language-switch { position: fixed; top: 20px; right: 24px; z-index: 20; display: flex; align-items: center; gap: 8px; margin: 0; padding: 9px 14px; border: 1px solid #d8dfe2; border-radius: 999px; background: #fff; color: #89979c; font-size: 13px; letter-spacing: .02em; box-shadow: 0 2px 8px rgb(42 42 42 / 5%); }
 .language-switch a { color: #aabcc2; text-decoration: none; }
 .language-switch a:hover, .language-switch a[aria-current="page"] { color: var(--accent); }
 .social-links {
@@ -164,7 +164,7 @@ h1, h2, h3, p, figure, ol, ul, dl, dd { margin: 0; }
     .site-sidebar { position: sticky; inset: 0 0 auto; width: 100%; height: auto; padding: 10px 25px; display: flex; justify-content: space-between; align-items: center; gap: 18px; }
     .sidebar-nav { flex-direction: row; flex-wrap: wrap; gap: 5px 18px; }
     .sidebar-nav a { padding: 7px 0; font-size: 12px; }
-    .language-switch { flex: 0 0 auto; margin: 0; }
+    .language-switch { position: static; flex: 0 0 auto; margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
     .social-links { flex: 0 0 auto; width: auto; gap: 14px; margin: 0; padding: 0; border: 0; }
     .social-link, .social-link svg { width: 19px; height: 19px; }
     .page-main { margin-left: 0; }

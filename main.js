@@ -31,12 +31,9 @@ function renderSidebar() {
         const localizedLabel = label || (isJapanese ? links.find((item) => item.id === id).labels[1] : links.find((item) => item.id === id).labels[0]);
         return `<a href="${localizedHref}"${current}${target}>${localizedLabel}</a>`;
     }).join('');
-    const englishHref = `/${pageFiles[page] || 'index.html'}${page === 'about' ? '#about' : ''}`;
-    const japaneseHref = `/ja/${pageFiles[page] || 'index.html'}${page === 'about' ? '#about' : ''}`;
     mount.innerHTML = `
         <aside class="site-sidebar">
             <nav class="sidebar-nav" aria-label="Primary navigation">${nav}</nav>
-            <nav class="language-switch" aria-label="Language"><a href="${japaneseHref}"${isJapanese ? ' aria-current="page"' : ''}>日本語</a><span>/</span><a href="${englishHref}"${!isJapanese ? ' aria-current="page"' : ''}>English</a></nav>
             <div class="social-links" aria-label="Social links">
                 <a class="social-link" href="${SITE.github}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">${icons.github}</a>
                 <a class="social-link" href="mailto:${SITE.email}" aria-label="Email">${icons.email}</a>

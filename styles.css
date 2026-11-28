@@ -79,7 +79,7 @@ h1, h2, h3, p, figure, ol, ul, dl, dd { margin: 0; }
     letter-spacing: .11em;
     text-transform: uppercase;
 }
-.about-hero { width: min(1000px, calc(100% - 80px)); margin-top: 48px; padding: 30px 30px 0; border: 1px solid #e1e5e7; border-radius: 12px; background: #fff; box-shadow: 0 2px 8px rgb(42 42 42 / 4%); }
+.about-hero { width: min(900px, calc(100% - 80px)); margin-top: 48px; padding: 30px 30px 0; border: 1px solid #e1e5e7; border-radius: 12px; background: #fff; box-shadow: 0 2px 8px rgb(42 42 42 / 4%); }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 30px; padding: 0 0 28px; }
 .hero-copy h1, .page-header h1 {
     font-family: var(--serif);
@@ -168,7 +168,7 @@ h1, h2, h3, p, figure, ol, ul, dl, dd { margin: 0; }
     .social-link, .social-link svg { width: 19px; height: 19px; }
     .page-main { margin-left: 0; }
     .content { width: min(824px, calc(100% - 50px)); }
-    .about-hero { width: min(1000px, calc(100% - 50px)); margin-top: 28px; }
+    .about-hero { width: min(900px, calc(100% - 50px)); margin-top: 28px; }
     .page-header { padding-top: 48px; }
 }
 

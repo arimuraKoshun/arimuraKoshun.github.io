@@ -28,7 +28,7 @@ function renderSidebar() {
         const current = id === page ? ' aria-current="page"' : '';
         const target = external ? ' target="_blank" rel="noopener noreferrer"' : '';
         const localizedHref = external ? href : `${isJapanese ? '/ja/' : '/'}${pageFiles[id] || href}${id === 'about' ? '#about' : ''}`;
-        const localizedLabel = label || (isJapanese ? links.find((item) => item.id === id).labels[1] : links.find((item) => item.id === id).labels[0]);
+        const localizedLabel = label || links.find((item) => item.id === id).labels[0];
         return `<a href="${localizedHref}"${current}${target}>${localizedLabel}</a>`;
     }).join('');
     mount.innerHTML = `

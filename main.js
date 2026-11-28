@@ -5,12 +5,14 @@ const SITE = {
 };
 
 const page = document.body.dataset.page || 'about';
+const isJapanese = location.pathname.startsWith('/ja/');
+const pageFiles = { about: 'index.html', publications: 'publications.html', awards: 'awards.html' };
 const links = [
-    { id: 'about', label: 'About', href: 'index.html#about' },
-    { id: 'publications', label: 'Publications', href: 'publications.html' },
-    { id: 'awards', label: 'Awards', href: 'awards.html' },
+    { id: 'about', labels: ['About', 'プロフィール'], href: 'index.html#about' },
+    { id: 'publications', labels: ['Publications', '業績'], href: 'publications.html' },
+    { id: 'awards', labels: ['Awards', '受賞歴'], href: 'awards.html' },
     { id: 'cv', label: 'CV', href: 'https://drive.google.com/file/d/1xxpqyVTEw8NTMN-69hKBbmtLLa6-XXoB/view?usp=sharing', external: true },
-    { id: 'contact', label: 'Contact', href: 'index.html#contact' },
+    { id: 'contact', labels: ['Contact', '連絡先'], href: 'index.html#contact' },
 ];
 
 const icons = {
@@ -25,11 +27,16 @@ function renderSidebar() {
     const nav = links.map(({ id, label, href, external }) => {
         const current = id === page ? ' aria-current="page"' : '';
         const target = external ? ' target="_blank" rel="noopener noreferrer"' : '';
-        return `<a href="${href}"${current}${target}>${label}</a>`;
+        const localizedHref = external ? href : `${isJapanese ? '/ja/' : '/'}${pageFiles[id] || href}${id === 'about' ? '#about' : ''}`;
+        const localizedLabel = label || (isJapanese ? links.find((item) => item.id === id).labels[1] : links.find((item) => item.id === id).labels[0]);
+        return `<a href="${localizedHref}"${current}${target}>${localizedLabel}</a>`;
     }).join('');
+    const englishHref = `/${pageFiles[page] || 'index.html'}${page === 'about' ? '#about' : ''}`;
+    const japaneseHref = `/ja/${pageFiles[page] || 'index.html'}${page === 'about' ? '#about' : ''}`;
     mount.innerHTML = `
         <aside class="site-sidebar">
             <nav class="sidebar-nav" aria-label="Primary navigation">${nav}</nav>
+            <nav class="language-switch" aria-label="Language"><a href="${japaneseHref}"${isJapanese ? ' aria-current="page"' : ''}>日本語</a><span>/</span><a href="${englishHref}"${!isJapanese ? ' aria-current="page"' : ''}>English</a></nav>
             <div class="social-links" aria-label="Social links">
                 <a class="social-link" href="${SITE.github}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">${icons.github}</a>
                 <a class="social-link" href="mailto:${SITE.email}" aria-label="Email">${icons.email}</a>
@@ -41,7 +48,7 @@ function renderSidebar() {
 function renderFooter() {
     const mount = document.getElementById('site-footer');
     if (!mount) return;
-    mount.innerHTML = `<div class="content footer-content"><span>© 2026 Koshun Arimura</span><span>Set in Playfair Display &amp; Inter</span></div>`;
+    mount.innerHTML = `<div class="content footer-content"><span>© 2026 Koshun Arimura</span></div>`;
 }
 
 renderSidebar();

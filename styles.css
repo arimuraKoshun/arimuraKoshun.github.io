@@ -52,6 +52,9 @@ h1, h2, h3, p, figure, ol, ul, dl, dd { margin: 0; }
     transition: color .2s ease;
 }
 .sidebar-nav a:hover, .sidebar-nav a[aria-current="page"] { color: var(--accent); }
+.language-switch { display: flex; align-items: center; gap: 7px; margin-top: 28px; color: #89979c; font-size: 12px; letter-spacing: .04em; }
+.language-switch a { color: #aabcc2; text-decoration: none; }
+.language-switch a:hover, .language-switch a[aria-current="page"] { color: var(--accent); }
 .social-links {
     display: flex;
     justify-content: space-between;
@@ -123,6 +126,7 @@ h1, h2, h3, p, figure, ol, ul, dl, dd { margin: 0; }
 
 .page-content { padding-bottom: 48px; }
 .page-header { padding: 80px 0 31px; }
+.page-header > p { margin-top: 12px; color: var(--soft); }
 .year-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
 .year-nav a { padding: 5px 12px; border: 1px solid #d5dbde; border-radius: 999px; color: var(--soft); font-family: var(--numbers); font-size: 14px; text-decoration: none; transition: background-color .2s ease, color .2s ease, border-color .2s ease; }
 .year-nav a:hover { border-color: var(--accent-dark); background: #fff; color: var(--accent-dark); }
@@ -160,6 +164,7 @@ h1, h2, h3, p, figure, ol, ul, dl, dd { margin: 0; }
     .site-sidebar { position: sticky; inset: 0 0 auto; width: 100%; height: auto; padding: 10px 25px; display: flex; justify-content: space-between; align-items: center; gap: 18px; }
     .sidebar-nav { flex-direction: row; flex-wrap: wrap; gap: 5px 18px; }
     .sidebar-nav a { padding: 7px 0; font-size: 12px; }
+    .language-switch { flex: 0 0 auto; margin: 0; }
     .social-links { flex: 0 0 auto; width: auto; gap: 14px; margin: 0; padding: 0; border: 0; }
     .social-link, .social-link svg { width: 19px; height: 19px; }
     .page-main { margin-left: 0; }
@@ -172,6 +177,7 @@ h1, h2, h3, p, figure, ol, ul, dl, dd { margin: 0; }
     .site-sidebar { flex-wrap: wrap; padding: 8px 18px 10px; }
     .sidebar-nav { width: 100%; justify-content: space-between; gap: 4px 8px; }
     .sidebar-nav a { font-size: 10px; letter-spacing: .07em; }
+    .language-switch { width: 100%; justify-content: flex-end; font-size: 11px; }
     .social-links { gap: 18px; }
     .content { width: calc(100% - 36px); }
     .about-hero { width: calc(100% - 36px); padding: 20px 18px 0; }
